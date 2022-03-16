@@ -13,7 +13,7 @@ export default async function locationHandler (req, res) {
     try {
         const response = await client.getEntries({
             content_type: "location",
-            "fields.name": location
+            "fields.name": location.toLowerCase()
         });
         
         // console.log(response.items);

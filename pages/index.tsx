@@ -53,7 +53,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
+      <main className="flex w-full flex-1 flex-col items-center justify-center px-10 text-center">
         <h1 className="text-6xl font-bold mb-10">
           Welcome to the Location Genie <span className="font-medium">🧞</span>
         </h1>
