@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import React, { useState } from "react";
 import LocationInfo from "../components/LocationInfo";
 import SearchInput from "../components/SearchInput";
@@ -7,7 +6,7 @@ import LandingScreen from "../components/LandingScreen";
 
 const Home: NextPage = () => {
   const [ startSearch, setStartSearch ] = useState(false);
-  const [ searchInput, setSearchInput ] = useState("");
+  const [ searchInput, setSearchInput ] = useState<string>("");
   const [ locationDetails, setLocationDetails ] = useState({
     name: "",
     description: ""
@@ -48,11 +47,6 @@ const Home: NextPage = () => {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2 bg-slate-900 text-white">
-      <Head>
-        <title>Location Genie</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main className="flex w-full flex-1 flex-col items-center justify-center px-10 text-center">
         <h1 className="text-6xl font-bold mb-10">
           Welcome to the Location Genie <span className="font-medium">🧞</span>
