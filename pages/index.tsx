@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import LocationInfo from "../components/LocationInfo";
 import SearchInput from "../components/SearchInput";
 import LandingScreen from "../components/LandingScreen";
+import What3Words from "../components/What3Words";
 
 const Home: NextPage = () => {
   const [ startSearch, setStartSearch ] = useState(false);
@@ -53,6 +54,7 @@ const Home: NextPage = () => {
         </h1>
         <p className="text-4xl font-medium text-slate-500 mb-10">Tell us a location you would like to learn more about.</p>
         <SearchInput searchInput={searchInput} handleSearch={handleSearch} setSearchInput={setSearchInput} />
+        <What3Words />
         {searchInput && <LocationInfo name={locationDetails.name} description={locationDetails.description} />}
       </main>
     </div>

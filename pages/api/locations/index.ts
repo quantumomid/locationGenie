@@ -32,8 +32,10 @@ export default async function AllLocationHandler (req:NextApiRequest, res:NextAp
         content_type: "location",
     });
 
+    // console.log(response.items);
+
     const locationsData = response.items.map((locationData) => ({ name: locationData.fields.name, summary: locationData.fields.summary }));
 
-    console.log(response);
+    // console.log(response);
     res.status(200).json({ locations: locationsData });
 }
