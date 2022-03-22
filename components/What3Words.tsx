@@ -1,9 +1,9 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { What3wordsAutosuggest } from "@what3words/react-components";
 
-const What3Words = () => {
+const What3Words: React.FC = () => {
     const [value, setValue] = useState("");
-    const onChange = (e) => setValue(e.target.value);
+    const onChange = (e: any) => setValue(e.target.value);
     return (
         <div>
             <label htmlFor="w3w">what3words address (optional):</label>
@@ -16,7 +16,6 @@ const What3Words = () => {
                     type="text"
                     value={value}
                     onChange={onChange}
-                    optional="true"
                 />
             </What3wordsAutosuggest>
         </ div>
