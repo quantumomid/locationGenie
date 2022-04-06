@@ -75,6 +75,7 @@ const MapPage = () => {
   const drawGrid = () => {
     const zoom = map.getZoom()
     const loadFeatures = zoom > 17
+    let grid_layer;
 
     if (loadFeatures) {
       // Zoom level is high enough
@@ -123,6 +124,11 @@ const MapPage = () => {
     if (map) {
       map.whenReady(drawGrid)
       map.on('move', drawGrid)
+    //   map.on('zoomlevelschange', drawGrid)
+    //   map.on('zoomend', drawGrid)
+    // map.on('zoomstart', drawGrid)
+    map.on('resize', drawGrid)
+
     }
   }, [map])
 

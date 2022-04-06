@@ -3,7 +3,7 @@ import { What3wordsAutosuggest } from "@what3words/react-components";
 
 const What3Words: React.FC = () => {
     const [value, setValue] = useState("");
-    const onChange = (e: any) => setValue(e.target.value);
+    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value);
     return (
         <div>
             <label htmlFor="w3w">what3words address (optional):</label>
