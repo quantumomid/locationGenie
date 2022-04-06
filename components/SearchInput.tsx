@@ -3,7 +3,7 @@ import React, { SetStateAction } from "react";
 interface SearchInputProps {
   searchInput: string;
   setSearchInput: React.Dispatch<SetStateAction<string>>;
-  handleSearch: (event: any) => void;
+  handleSearch: (event: React.FormEvent<HTMLFormElement>) => void;
 }
 
 const SearchInput:React.FC<SearchInputProps> = ({ handleSearch, searchInput, setSearchInput }) => (
