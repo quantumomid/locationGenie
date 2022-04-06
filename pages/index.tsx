@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import LocationInfo from "../components/LocationInfo";
 import SearchInput from "../components/SearchInput";
 import LandingScreen from "../components/LandingScreen";
-import What3Words from "../components/What3Words";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   const [ startSearch, setStartSearch ] = useState(false);
@@ -44,6 +44,10 @@ const Home: NextPage = () => {
     speechSynthesis.speak(utterance);
   }
 
+  const handleStopSpeech = () => {
+    speechSynthesis.cancel();
+  }
+
   if(!startSearch) return <LandingScreen handleStart={handleStart} />
 
   return (
@@ -52,10 +56,11 @@ const Home: NextPage = () => {
         <h1 className="text-6xl font-bold mb-10">
           Welcome to the Location Genie <span className="font-medium">🧞</span>
         </h1>
+        <button onClick={handleStopSpeech} className="text-2xl my-5">🛑</button>
         <p className="text-4xl font-medium text-slate-500 mb-10">Tell us a location you would like to learn more about.</p>
         <SearchInput searchInput={searchInput} handleSearch={handleSearch} setSearchInput={setSearchInput} />
-        <What3Words />
         {searchInput && <LocationInfo name={locationDetails.name} description={locationDetails.description} />}
+        <h2 className="text-2xl">Click <Link href="/map"><a className="underline">here</a></Link> to see map 🗺</h2>
       </main>
     </div>
   )
