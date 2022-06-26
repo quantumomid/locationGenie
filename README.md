@@ -8,6 +8,9 @@ A mini project as part of learning during the iGNITE 🔥 hackathon 👨‍💻.
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Contentful CMS](https://www.contentful.com/)
 - [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API)
+- What3Words
+- Google Maps
+- Leaflet JS Maps
 
 This application used the Next.js ⚡ + Tailwind CSS Example template.
 
