@@ -5,7 +5,7 @@ import Script from "next/script";
 export default function MapWithReactLeaflet () {
     return (
         <>
-            <div id="wrapper" className="relative h-full">
+            <div id="wrapper" className="relative h-[220px] w-full mb-10">
                 <MapContainer id="map-container" center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -17,7 +17,6 @@ export default function MapWithReactLeaflet () {
                         </Popup>
                     </Marker>
                 </MapContainer>
-                {/* <div id="map" className="h-[400px] w-full"></div> */}
             </div>
             <Script
                 src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
